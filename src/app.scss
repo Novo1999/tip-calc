@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-size-form: 24px;
+  --font-family: "Space Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  background-color: var(--light-grayish-cyan);
+}
+
+.container {
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 1rem;
+  width: 45rem;
+  height: 26rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .calculator {
+    display: grid;
+
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+
+.tip {
+  grid-row-start: 4;
+  label {
+    color: var(--dark-grayish-cyan);
+  }
+}
+.tip-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  button:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-grayish-cyan);
+    transition: 0.3s all linear;
+  }
+  button,
+  input {
+    margin-top: 0.5rem;
+    margin-right: 0.8rem;
+    width: 5.2rem;
+    height: 2.5rem;
+    font-size: 21px;
+    font-family: var(--font-family);
+    color: var(--white);
+    border-radius: 0.5rem;
+    // direction: rtl;
+  }
+  button {
+    background-color: var(--very-dark-cyan);
+    cursor: pointer;
+    border: none;
+  }
+  input {
+    color: var(--dark-grayish-cyan);
+    text-align: center;
+  }
+  ::placeholder {
+    color: var(--dark-grayish-cyan);
+    font-size: 20px;
+    padding-right: 4px;
+  }
+  input:hover {
+    background-color: var(--light-grayish-cyan);
+    transition: 0.3s all linear;
+  }
+}
+
+.app {
+  h1 {
+    font-size: var(--font-size);
+    color: var(--dark-grayish-cyan);
+    text-align: center;
+    line-height: 2rem;
+    position: relative;
+    bottom: 3rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.people-form {
+  grid-row-start: 7;
+  width: 10rem;
+  position: relative;
+  top: 1rem;
+  label {
+    color: var(--dark-grayish-cyan);
+  }
+
+  input {
+    font: var(--font-family);
+    color: var(--very-dark-cyan);
+    text-align: right;
+    border: none;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.151);
+    border-radius: 0.5rem;
+    margin-top: 0.4rem;
+    width: 18.2rem;
+    height: 2.5rem;
+    background: url(../../images/icon-person.svg) no-repeat 0.5rem;
+    padding-right: 10px;
+    background-color: var(--very-light-grayish-cyan);
+    font-size: var(--font-size-form);
+    direction: rtl;
+  }
+  input:hover,
+  input:focus {
+    background-color: var(--light-grayish-cyan);
+    transition: 0.3s all linear;
+  }
+}
+
+.bill-form input {
+  font: var(--font-family);
+  color: var(--very-dark-cyan);
+  text-align: right;
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.151);
+  border-radius: 0.5rem;
+  margin-top: 0.4rem;
+  width: 18.2rem;
+  height: 2.5rem;
+  background: url(../../images/icon-dollar.svg) no-repeat 0.5rem;
+  padding-right: 10px;
+  background-color: var(--very-light-grayish-cyan);
+  font-size: var(--font-size-form);
+  direction: rtl;
+}
+.bill-form :hover {
+  background-color: var(--light-grayish-cyan);
+  transition: 0.3s all linear;
+}
+.display {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.disp-item {
+  padding: 2.5rem;
+  background-color: var(--very-dark-cyan);
+  width: 21rem;
+  height: 23rem;
+  border-radius: 1rem;
+  display: grid;
+  margin-right: 1rem;
+  span {
+    font-size: 13px;
+    color: var(--dark-grayish-cyan);
+  }
+  p {
+    color: var(--white);
+    font-size: 15px;
+    position: relative;
+    right: 0.5rem;
+  }
+  h1 {
+    position: relative;
+    left: 4rem;
+    bottom: 4rem;
+    font-size: 39px;
+    color: var(--strong-cyan);
+    letter-spacing: 2px;
+  }
+  button {
+    grid-row-start: 5;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: var(--strong-cyan);
+    width: 17rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--very-dark-grayish-cyan);
+  }
+  button:hover {
+    background-color: var(--light-grayish-cyan);
+    transition: 0.3s all linear;
+  }
+  h4 {
+    position: relative;
+    left: 8.3rem;
+    bottom: 4rem;
+    font-size: 20px;
+    color: var(--strong-cyan);
+    letter-spacing: 2px;
+  }
+}
